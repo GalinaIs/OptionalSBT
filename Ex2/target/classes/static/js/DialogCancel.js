@@ -1,6 +1,6 @@
 function sendCancelReserveServer (dateValue, timeFrom) {
     $.ajax({
-        url: 'http://localhost:8080/cancelReserve?dateValue=' + dateValue + "&timeFrom=" + timeFrom,
+        url: '/cancelReserve?dateValue=' + dateValue + "&timeFrom=" + timeFrom,
         dataType: 'json',
         context: this,
         success: function (data) {
@@ -18,7 +18,6 @@ function sendCancelReserveServer (dateValue, timeFrom) {
             }
 
             $dialogAnswer.append($('<div />', {text: answer}))
-            console.log(data);
 
             $dialogAnswer.dialog({
                 modal: true,
